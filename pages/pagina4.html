@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="../estilos/styles.css">
 </head>
 <body>
-    <header>
+    <header class="headerSitio">
         <a href="../index.html">
             <img class="logo_cine" src="../img/cine alfa .png">
         </a>
-    </header>
     <nav class="navegacion">
         <ul>
             <li><a href="../index.html">Cartelera</a></li>
@@ -25,15 +24,30 @@
             <li><a href="pagina4.html">Compra Online</a></li>
         </ul>
     </nav>
+    </header>
     <div>
         <h2>Compra Online</h2>
-        <p>Por favor, seleccione su película</p>
-        <form>
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellidos"><br>
-            <input type="email" placeholder="E-Mail...">
-            <input type="tel" placeholder="Telefono..."><br>
-            <select class="">
+
+        <form class="contenedor-campo">
+            <legend>Por favor, seleccione su película</legend>
+            <div class="campo">
+                <label>Nombre:</label>
+                <input class="input" type="text" placeholder="Nombre">
+            </div>
+            <div class="campo">
+                <label>Apellidos:</label>
+                <input class="input" type="text" placeholder="Apellidos"><br>
+            </div>
+            <div class="campo">
+                <label>E-mail:</label>
+                <input class="input" type="email" placeholder="E-Mail...">
+            </div>
+            <div class="campo">
+                <label>Telefono:</label>
+                <input class="input" type="tel" placeholder="Telefono..."><br>
+            </div>
+            <select class="seleccion">
+                <label>Seleccionar pelicula:</label>
                 <option disable selected>Seleccione su pelicula</option>
                 <option value="">Spider-Man: No Way Home</option>
                 <option value="">Matrix resurrections</option>
@@ -41,8 +55,13 @@
                 <option value="">House Of Gucci</option>
                 <option value="">Encanto</option>
             </select><br>
-            <input class="" type="number" placeholder="Cantidad de entradas" min="1"><br>
-            <input class="" type="submit" value="Comprar"><br>
+            <div class="campo">
+                <label>Cantidad de entradas:</label>
+                <input class="Cantidad" type="number" placeholder="Cantidad de entradas" min="1"><br>
+            </div>
+            <div class="comprar">
+                <input class="boton" type="submit" value="Comprar"><br>
+            </div>
         </form>
 
     </div>
