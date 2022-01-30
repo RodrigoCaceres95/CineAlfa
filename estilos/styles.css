@@ -156,7 +156,7 @@ p {
     margin-bottom: 20rem;
 }
 .pelicula {
-    border-bottom: 1px solid var(white));
+    border-bottom: 1px solid var(white);
     margin-bottom: 5rem;
 }
 .pelicula:last-of-type {
