@@ -70,6 +70,24 @@ li:hover {
     width: 250px;
     justify-content: center;
 }
+@media (min-width:768px) {
+    .navegacion, ul{
+        background-color: var(--colorsecundario);
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+    }
+    li, .navegacion {
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    .navegacion, a {
+        padding: 7px 13px;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+}
 @media (min-width: 1024px) {
     .headerSitio {
         width: 100vw;
@@ -114,6 +132,7 @@ p {
 .carteleras:hover, .estrenos__cine:hover {
     cursor: pointer;
     opacity: 0.5;
+    transition: 0.3s;
 }
 @media (min-width: 1024px) {
     .cartelera__cine{
@@ -176,17 +195,13 @@ footer{
     }
 }
 .nosotros {
-    display: grid;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 3rem 0;
+    margin: 10px 10px;
 }
-.elCine {
+.parrafo1, .parrafo2 {
+    font-family: var(--fuenteprincipal);
+    text-align: justify;
 }
-p {
-    text-align:justify;
-}
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .nosotros {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -199,10 +214,12 @@ p {
         "a a a a a c c c"
         "a a a a a c c c"
         "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
         "a a a a a d d d"
         "a a a a a e e e";
     }
-    .cineAlfa {
+    .nosotrosCine {
         grid-area: a;
     }
     .titulo {
@@ -246,14 +263,15 @@ p {
 }
 .contenedor-campo {
     background-color: var(--colorsecundario);
-    width: min(60rem, 100%);
-    margin: 10px 10px;
+    width: min(100rem, 100%);
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 1rem;
     font-family: var(--fuenteprincipal);
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
 }
 @media (min-width: 768px) {
     .contenedor-campo{
@@ -264,13 +282,14 @@ p {
 .campo {
     margin-bottom: 1rem;
     width: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
 }
 @media (min-width: 768px) {
     .campo label {
         flex: 0 0 calc(50% - .5rem);
+    }
+    .campo  {
+        display: flex;
+        align-items: center;
     }
 }
 .contenedor-campo legend {
@@ -280,6 +299,7 @@ p {
     font-weight: 700;
     color: white;
     margin-bottom: 2rem;
+    padding-left: 70px;
     display: block;
 }
 .campo {
@@ -291,14 +311,20 @@ p {
     margin-right: 10px;
     color: black;
     font-weight: bold;
+    margin-top: 2rem;
     margin-bottom: .5rem;
     display: block;
+}
+.contenedor-campo__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .campo input[type="text"],
 .campo input[type="tel"],
 .campo input[type="email"],
 .campo input[type="number"],
-.seleccion, .boton {
+.boton {
     width: 100%;
     padding: .5rem;
     border: none;
@@ -307,6 +333,23 @@ p {
     margin-bottom: 1rem;
     height: 4rem;
 }
+.seleccion select{
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    height: 4rem;
+    margin-bottom: -1rem;
+}
+
+/*.campo input[type="number"]{
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 4rem;
+}*/
 .input {
     width: 100%;
     border: none;
@@ -317,17 +360,47 @@ p {
     display: flex;
     justify-content: flex-end;
     margin-top: .5rem;
+    margin-bottom: .5rem;
     padding: .5rem 3rem;
     font-weight: 700;
     font-family: var(--fuenteprincipal);
     text-transform: uppercase;
     border: none;
+    background-color: #212120;
+    color: white;
 }
 .boton:hover {
     cursor: pointer;
 }
 .seleccion {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     width: 100%;
+    border-radius: 5px;
+}
+nav a:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, .3);
+        transition: 0.3s;
+        border-radius: 15px;
+        padding: 20px 20px;
+    }
+
+@media (min-width: 768px) {
+    nav a:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, .2);
+        transition: 0.3s;
+        border-radius: 15px;
+        padding: 0px 10px;
+    }
+    .seleccion {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .seleccion select {
+        margin-bottom: 1rem;
+    }
 }
