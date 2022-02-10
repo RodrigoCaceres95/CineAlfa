@@ -1,0 +1,27 @@
+/*pagina 3*/
+.contenedor-tabla {
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.dias{
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px 15px;
+}
+.precios {
+    background-color: white;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    padding: 15px 15px;
+    text-align: justify;
+}
+@media (min-width: 768px) {
+    .contenedor-tabla {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 250px;
+    }
+}

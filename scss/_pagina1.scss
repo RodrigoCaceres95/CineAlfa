@@ -1,0 +1,48 @@
+/*Pagina 1*/
+.contenedor{ 
+    gap: 100px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: grid;
+    width: Min(90%, 110rem);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: auto;
+    margin-left: 25px;
+    grid-gap: 170px;
+    padding-bottom: 50px;
+    img {
+        padding-top: 50px;
+    }
+    &:last-of-type{
+        margin-bottom: 20rem;
+    }
+}
+.sinopsis {
+    margin-bottom: 20rem;
+}
+@media (min-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: Min(90%, 110rem);
+        column-gap: 4rem;
+        grid-gap: 180px;
+        margin-left: 150px;
+        padding-bottom: 100px;
+        img {
+            padding-top: 70px;
+        }
+    }
+    .estrenos__cine {
+        max-width: 100%;
+        display: block;
+        margin-bottom: 2rem;
+    }
+}
+.pelicula {
+    border-bottom: 1px solid white;
+    margin-bottom: 5rem;
+}
+.sinopsis {
+    margin-bottom: 20px;
+}

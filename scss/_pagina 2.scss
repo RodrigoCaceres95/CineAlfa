@@ -1,0 +1,42 @@
+/*pagina 2*/
+.nosotros {
+    margin: 10px 10px;
+}
+.parrafo1, .parrafo2 {
+    font-family: $fuenteprincipal;
+    text-align: justify;
+}
+@media (min-width: 1024px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 100px;
+        grid-template-areas: 
+        "a a a a a b b b"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a c c c"
+        "a a a a a d d d"
+        "a a a a a e e e";
+    }
+    .nosotrosCine {
+        grid-area: a;
+    }
+    .titulo {
+        grid-area: b;
+    }
+    .parrafo1 {
+        grid-area: c;
+    }
+    .ubicacion {
+        grid-area: d;
+    }
+    .parrafo2 {
+        grid-area: e;
+    }
+}

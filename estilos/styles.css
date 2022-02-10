@@ -1,3 +1,4 @@
+/*Globales*/
 :root {
     --colorprimario: #212120;
     --colorsecundario: #6b181d;
@@ -111,11 +112,40 @@ ul li a {
         width: 50%;
     }
 }
-
 p {
     color: white;
 }
-
+footer{
+    margin-top: 50px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 768px) {
+    footer {
+        margin-left: 150px;
+        margin-right: auto;
+    }
+}
+.menupushup {
+    background-color: var(--colorsecundario);
+}
+.hover:hover {
+color: white;
+background-color: rgba(0, 0, 0, .2);
+transition: 0.3s;
+padding: 0 auto;
+}
+.offcanvas-body ul li a{
+font-size: 18px;
+position: relative;
+top: -4px;
+transition: 0.5s;
+}
+.offcanvas-header {
+background-color: var(--colorsecundario);
+}
+/*Index*/
 .cartelera__cine{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -132,12 +162,13 @@ p {
         grid-template-columns: repeat(5, 1fr);
     }
 }
+/*Pagina 1*/
 .contenedor{ 
     gap: 100px;
     margin-top: 20px;
     margin-bottom: 100px;
     display: grid;
-    width: min(90%, 110rem);
+    width: Min(90%, 110rem);
     grid-template-rows: repeat(1, 1fr);
     align-items: auto;
     margin-left: 25px;
@@ -154,7 +185,7 @@ p {
     .contenedor {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: min(90%, 110rem);
+        width: Min(90%, 110rem);
         column-gap: 4rem;
         grid-gap: 180px;
         margin-left: 150px;
@@ -176,32 +207,16 @@ p {
     border-bottom: 1px solid var(white);
     margin-bottom: 5rem;
 }
-.pelicula:last-of-type {
-    border: none;
-    margin-bottom: 0;
+.sinopsis {
+    margin-bottom: 20px;
 }
-
-footer{
-    margin-top: 50px;
-    font-size: 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-@media (min-width: 768px) {
-    footer {
-        margin-left: 150px;
-        margin-right: auto;
-    }
-}
+/*pagina 2*/
 .nosotros {
     margin: 10px 10px;
 }
 .parrafo1, .parrafo2 {
     font-family: var(--fuenteprincipal);
     text-align: justify;
-}
-.sinopsis {
-    margin-bottom: 20px;
 }
 @media (min-width: 1024px) {
     .nosotros {
@@ -237,6 +252,7 @@ footer{
         grid-area: e;
     }
 }
+/*pagina 3*/
 .contenedor-tabla {
     border-collapse: collapse;
     margin: 25px 0;
@@ -263,6 +279,7 @@ footer{
         margin-bottom: 250px;
     }
 }
+/*pagina 4*/
 .contenedor-campo {
     background-color: var(--colorsecundario);
     width: min(100rem, 100%);
@@ -406,24 +423,7 @@ footer{
     }
 }
 
-.menupushup {
-        background-color: var(--colorsecundario);
-}
-.hover:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-    transition: 0.3s;
-    padding: 0 auto;
-}
-.offcanvas-body ul li a{
-    font-size: 18px;
-    position: relative;
-    top: -4px;
-    transition: 0.5s;
-}
-.offcanvas-header {
-    background-color: var(--colorsecundario);
-}
+
 .carousel-item > img {
     width: 640px;
     height: 400px;
