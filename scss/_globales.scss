@@ -18,111 +18,112 @@ h2 {
     margin-left: 10px;
 }
 body {
-    background-color: $colorprimario;
+    background-color: map-get($colores, colorprimario);
     font-size: 2rem;
-}
-h1, h2, h3, a, table{
-    font-family: $fuenteprincipal;
-    color: $colorfuente;
-}
-header {
-    width: 100%;
-    background-color: $colorsecundario;
-    nav {
-        ul {
-        float: right;
-            li {
+    header {
+        width: 100%;
+        background-color: map-get($colores, colorsecundario );
+        .logo_cine {
+            width: 223px;
+            justify-content: center;
+        }
+        nav {
+            ul {
             display: inline-block;
             line-height: 50px;
-            margin: 0 2px;
-                a{
-                display: block;
-                margin: auto;
-                font-size: nth($tamanofuente, 1);
-                padding: 2rem 2rem;
-                }
-                &:hover {
-                    background-color: #0000;
-                    opacity: .5;
-                    transition: .2s;
+            align-items: center;
+                li {
+                    margin: 0 2px;
+                    a{
+                    display: block;
+                    margin: 0 10px;
+                    font-size: nth($tamanofuente, 1);
+                    border-radius: 7px;
+                    padding: 10px 10px;
+                    }
+                    &:hover {
+                        background-color: #0000;
+                        opacity: .5;
+                        transition: .2s;
+                    }
                 }
             }
         }
     }
+    .hover:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, .2);
+        transition: 0.3s;
+        padding: 0 auto;
+    }
+    .menupushup {
+            background-color: map-get($colores, colorsecundario );
+    }
+    .offcanvas-body {
+        ul {
+            li {
+                a{
+                font-size: 18px;
+                position: relative;
+                top: -4px;
+                transition: 0.5s;
+                }
+            }
+        }
+    }
+    .offcanvas-header {
+    background-color: map-get($colores, colorsecundario );
+    }
+    footer{
+        margin-top: 50px;
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+h1, h2, h3, a, table{
+    font-family: $fuenteprincipal;
+    color: map-get($colores, colorfuente );
+}
+
 img {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.logo_cine {
-    display: flex;
-    width: 180px;
-    justify-content: center;
-}
 
-@media (min-width: nth($breakpoints, 2)) {
+
+@include mediaQuery(monitor, 1024px) {
     nav {
         .headerSitio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row;
             box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
-            ul li a{
-                    background-color: $colorsecundario;
-                    display: flex;
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin: 0 5px;
+                li {
+                    a{
+                    background-color: map-get($colores, colorsecundario );
                     margin-right: 20px;
-                    flex-direction: row;
-                    padding: 7px 13px;
                     text-decoration: none;
                     font-size: nth($tamanofuente, 2);
-                    border-radius: 3px;
-                    margin: 0 5px;
+                    border-radius: 7px;
+                    padding: 7px 13px;
                     }
                 }
             }
-            .logo_cine {
-                width: 50%;
-            }
         }
+    }
+}
 p {
     color: white;
 }
-footer{
-    margin-top: 50px;
-    font-size: 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-@media (min-width: nth($breakpoints, 1)) {
+
+@include mediaQuery(iPad, 768px) {
     footer {
         margin-left: 150px;
         margin-right: auto;
     }
 }
-.menupushup {
-    background-color: $colorsecundario;
-}
-.hover:hover {
-color: white;
-background-color: rgba(0, 0, 0, .2);
-transition: 0.3s;
-padding: 0 auto;
-}
-.offcanvas-body {
-    ul {
-        li {
-            a{
-            font-size: 18px;
-            position: relative;
-            top: -4px;
-            transition: 0.5s;
-            }
-        }
-    }
-}
-.offcanvas-header {
-background-color: $colorsecundario;
-}
+
+

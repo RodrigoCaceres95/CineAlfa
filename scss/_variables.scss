@@ -1,10 +1,43 @@
-$colorprimario: #212120;
-$colorsecundario: #6b181d;
+$colores: (
+    colorprimario: #212120,
+    colorsecundario: #6b181d,
+    colorfuente: white
+);
 $fuenteprincipal: 'Be Vietnam Pro', sans-serif;
-$colorfuente: white;
+/*
 $breakpoints:
 768px,
 1024px;
+*/
+
 $tamanofuente:
 16px,
 18px;
+
+%gridColumns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+@mixin grid ($direction, $columns, $gap){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}
+/*
+@mixin mediaQuery ($pixeles) {
+    @media (min-width: $pixeles) {
+        @content
+    }
+}*/
+@mixin mediaQuery ($tamanoPantalla, $tamano) {
+    @if $tamanoPantalla == iPad {
+        @media (min-width: $tamano) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $tamano) {
+            @content
+        }
+    } 
+}

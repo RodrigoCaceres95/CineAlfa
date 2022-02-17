@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Keywords y descrpicio-->
+    <meta name="description" content="El cine Alfa es el cine-teatro más longevo de Jujuy. Se encuentra en la calle Patricias Argentinas 360, en la ciudad de San Salvador de Jujuy.">
+    <meta name="keywords" content="cine, cineAlfa, cine alfa, Jujuy, cartelera">
     <title>Cine Teatro Alfa</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
@@ -17,7 +21,7 @@
 </head>
 
 <body>
-    <div class="container-fluid-md">
+    <section class="container-fluid-md">
 
         <!--
     <nav class="navbar-toggler-md">
@@ -31,15 +35,15 @@
    </nav> -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light headerSitio sidebar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
+                <section class="container-fluid">
+                    <a id="CineAlfa" class="navbar-brand" href="index.html">
                         <img class="logo_cine navbar-brand" src="img/cine alfa .png">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    <section class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -48,7 +52,7 @@
                         <div
                             class="offcanvas-body collapse-md navbar-collapse-md offcanvas-body navbar-collapse menupushup">
                             <ul class="offcanvas-body justify-content-end navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
+                                <li id="Cartelera" class="nav-item">
                                     <a class="text-decoration-none hover" aria-current="page"
                                         href="index.html">Cartelera</a>
                                 </li>
@@ -67,12 +71,12 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
             </nav>
         </header>
-    </div>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    </section>
+    <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -109,8 +113,8 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    <div class="cartelera container-fluid">
+    </section>
+    <section class="cartelera container-fluid">
         <h2 class="titulo">Cartelera</h2>
         <div class="cartelera__cine row">
             <img class="carteleras" src="img/2.jpg" alt="Spider-Man: No Way Home">
@@ -120,7 +124,7 @@
                 alt="Clifford, el gran perro rojo">
             <img class="carteleras" src="img/house of gucci.jpg" alt="House of Gucci">
         </div>
-    </div>
+    </section>
     <footer>
         <a class="text-decoration-none" href="index.html">Cine teatro Alfa</a>
         <a class="text-decoration-none" href="pages/pagina1.html">Proximos estrenos</a>

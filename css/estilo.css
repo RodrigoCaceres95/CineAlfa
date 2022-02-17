@@ -1,3 +1,19 @@
+/*
+$breakpoints:
+768px,
+1024px;
+*/
+.cartelera__cine {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem; }
+
+/*
+@mixin mediaQuery ($pixeles) {
+    @media (min-width: $pixeles) {
+        @content
+    }
+}*/
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -19,98 +35,82 @@ h2 {
 body {
   background-color: #212120;
   font-size: 2rem; }
+  body header {
+    width: 100%;
+    background-color: #6b181d; }
+    body header .logo_cine {
+      width: 223px;
+      justify-content: center; }
+    body header nav ul {
+      display: inline-block;
+      line-height: 50px;
+      align-items: center; }
+      body header nav ul li {
+        margin: 0 2px; }
+        body header nav ul li a {
+          display: block;
+          margin: 0 10px;
+          font-size: 16px;
+          border-radius: 7px;
+          padding: 10px 10px; }
+        body header nav ul li:hover {
+          background-color: #0000;
+          opacity: .5;
+          transition: .2s; }
+  body .hover:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 0 auto; }
+  body .menupushup {
+    background-color: #6b181d; }
+  body .offcanvas-body ul li a {
+    font-size: 18px;
+    position: relative;
+    top: -4px;
+    transition: 0.5s; }
+  body .offcanvas-header {
+    background-color: #6b181d; }
+  body footer {
+    margin-top: 50px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
 
 h1, h2, h3, a, table {
   font-family: "Be Vietnam Pro", sans-serif;
   color: white; }
-
-header {
-  width: 100%;
-  background-color: #6b181d; }
-  header nav ul {
-    float: right; }
-    header nav ul li {
-      display: inline-block;
-      line-height: 50px;
-      margin: 0 2px; }
-      header nav ul li a {
-        display: block;
-        margin: auto;
-        font-size: 16px;
-        padding: 2rem 2rem; }
-      header nav ul li:hover {
-        background-color: #0000;
-        opacity: .5;
-        transition: .2s; }
 
 img {
   max-width: 100%;
   height: 100%;
   object-fit: cover; }
 
-.logo_cine {
-  display: flex;
-  width: 180px;
-  justify-content: center; }
-
 @media (min-width: 1024px) {
   nav .headerSitio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6); }
-    nav .headerSitio ul li a {
-      background-color: #6b181d;
+    nav .headerSitio ul {
       display: flex;
-      margin-right: 20px;
       flex-direction: row;
-      padding: 7px 13px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 3px;
       margin: 0 5px; }
-  .logo_cine {
-    width: 50%; } }
+      nav .headerSitio ul li a {
+        background-color: #6b181d;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 7px;
+        padding: 7px 13px; } }
 
 p {
   color: white; }
-
-footer {
-  margin-top: 50px;
-  font-size: 16px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
 
 @media (min-width: 768px) {
   footer {
     margin-left: 150px;
     margin-right: auto; } }
 
-.menupushup {
-  background-color: #6b181d; }
-
-.hover:hover {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding: 0 auto; }
-
-.offcanvas-body ul li a {
-  font-size: 18px;
-  position: relative;
-  top: -4px;
-  transition: 0.5s; }
-
-.offcanvas-header {
-  background-color: #6b181d; }
-
 /*Index*/
 .cartelera__cine {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
   padding-bottom: 5rem; }
 
 .carteleras:hover, .estrenos__cine:hover {
@@ -126,217 +126,3 @@ footer {
   width: 640px;
   height: 400px;
   position: relative; }
-
-/*Pagina 1*/
-.contenedor {
-  gap: 100px;
-  margin-top: 20px;
-  margin-bottom: 100px;
-  display: grid;
-  width: Min(90%, 110rem);
-  grid-template-rows: repeat(1, 1fr);
-  align-items: auto;
-  margin-left: 25px;
-  grid-gap: 170px;
-  padding-bottom: 50px; }
-  .contenedor img {
-    padding-top: 50px; }
-  .contenedor:last-of-type {
-    margin-bottom: 20rem; }
-
-.sinopsis {
-  margin-bottom: 20rem; }
-
-@media (min-width: 768px) {
-  .contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: Min(90%, 110rem);
-    column-gap: 4rem;
-    grid-gap: 180px;
-    margin-left: 150px;
-    padding-bottom: 100px; }
-    .contenedor img {
-      padding-top: 70px; }
-  .estrenos__cine {
-    max-width: 100%;
-    display: block;
-    margin-bottom: 2rem; } }
-
-.pelicula {
-  border-bottom: 1px solid white;
-  margin-bottom: 5rem; }
-
-.sinopsis {
-  margin-bottom: 20px; }
-
-/*pagina 2*/
-.nosotros {
-  margin: 10px 10px; }
-
-.parrafo1, .parrafo2 {
-  font-family: "Be Vietnam Pro", sans-serif;
-  text-align: justify; }
-
-@media (min-width: 1024px) {
-  .nosotros {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 100px;
-    grid-template-areas: "a a a a a b b b" "a a a a a c c c" "a a a a a c c c" "a a a a a c c c" "a a a a a c c c" "a a a a a c c c" "a a a a a c c c" "a a a a a c c c" "a a a a a d d d" "a a a a a e e e"; }
-  .nosotrosCine {
-    grid-area: a; }
-  .titulo {
-    grid-area: b; }
-  .parrafo1 {
-    grid-area: c; }
-  .ubicacion {
-    grid-area: d; }
-  .parrafo2 {
-    grid-area: e; } }
-
-/*pagina 3*/
-.contenedor-tabla {
-  border-collapse: collapse;
-  margin: 25px 0;
-  min-width: 400px;
-  margin-left: 10px;
-  margin-right: 10px; }
-
-.dias {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px 15px; }
-
-.precios {
-  background-color: white;
-  color: black;
-  text-align: left;
-  font-weight: bold;
-  padding: 15px 15px;
-  text-align: justify; }
-
-@media (min-width: 768px) {
-  .contenedor-tabla {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 250px; } }
-
-/*pagina 4*/
-.contenedor-campo {
-  background-color: #6b181d;
-  width: Min(100rem, 100%);
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-radius: 1rem;
-  font-family: "Be Vietnam Pro", sans-serif;
-  box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63); }
-
-@media (min-width: 768px) {
-  .contenedor-campo {
-    margin: 0 auto;
-    margin-bottom: 5rem; } }
-
-.campo {
-  margin-bottom: 1rem;
-  width: 100%; }
-
-@media (min-width: 768px) {
-  .campo label {
-    flex: 0 0 calc(50% - .5rem); }
-  .campo {
-    display: flex;
-    align-items: center; } }
-
-.contenedor-campo legend {
-  text-align: center;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 2rem;
-  padding-left: 70px;
-  display: block; }
-
-.campo {
-  margin-bottom: 1rem;
-  margin-left: 10px;
-  margin-right: 10px; }
-
-.campo label {
-  margin-right: 10px;
-  color: black;
-  font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-  display: block; }
-
-.contenedor-campo__flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-
-.campo input[type="text"],
-.campo input[type="tel"],
-.campo input[type="email"],
-.campo input[type="number"],
-.boton {
-  width: 100%;
-  padding: .5rem;
-  border: none;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  height: 4rem; }
-
-.seleccion select {
-  width: 100%;
-  border: none;
-  border-radius: 0.5rem;
-  height: 4rem;
-  margin-bottom: -1rem; }
-
-.input {
-  width: 100%;
-  border: none;
-  padding: 1.5rem;
-  border-radius: .7rem; }
-
-.boton {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-  padding: .5rem 3rem;
-  font-weight: 700;
-  font-family: "Be Vietnam Pro", sans-serif;
-  text-transform: uppercase;
-  border: none;
-  background-color: #212120;
-  color: white; }
-
-.boton:hover {
-  cursor: pointer; }
-
-.seleccion {
-  margin-top: 5px;
-  margin-bottom: 20px;
-  width: 100%;
-  border-radius: 5px; }
-
-@media (min-width: 1024px) {
-  .hover:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    padding: 0px auto; }
-  .seleccion {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    border-radius: 5px; }
-  .seleccion select {
-    margin-bottom: 1rem; } }
