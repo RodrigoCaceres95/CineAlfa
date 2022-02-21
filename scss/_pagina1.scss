@@ -20,7 +20,7 @@
 .sinopsis {
     margin-bottom: 20rem;
 }
-@media (min-width: 768px) {
+@include mediaQuery (iPad, 768px) {
     .contenedor {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

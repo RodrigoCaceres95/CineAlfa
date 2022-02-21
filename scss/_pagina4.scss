@@ -1,6 +1,6 @@
 /*pagina 4*/
 .contenedor-campo {
-    background-color: $colorsecundario;
+    background-color: map-get($colores, colorsecundario );
     width: Min(100rem, 100%);
     padding: 2rem;
     display: flex;

@@ -18,7 +18,7 @@
     padding: 15px 15px;
     text-align: justify;
 }
-@media (min-width: 768px) {
+@include mediaQuery (iPad, 768px) {
     .contenedor-tabla {
         margin-left: auto;
         margin-right: auto;

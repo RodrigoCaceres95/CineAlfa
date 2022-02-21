@@ -6,7 +6,7 @@
     font-family: $fuenteprincipal;
     text-align: justify;
 }
-@media (min-width: 1024px) {
+@include mediaQuery (monitor, 1024px) {
     .nosotros {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
