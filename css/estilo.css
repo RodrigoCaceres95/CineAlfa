@@ -200,26 +200,28 @@ p {
 /*pagina 3*/
 .contenedor-tabla {
   border-collapse: collapse;
-  margin: 25px 0;
-  min-width: 400px; }
+  text-align: center; }
 
 .dias {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px 15px; }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 .precios {
   background-color: white;
   color: black;
   text-align: left;
   font-weight: bold;
-  padding: 15px 15px;
-  text-align: justify; }
+  text-align: center; }
 
 @media (min-width: 768px) {
   .contenedor-tabla {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 250px; } }
+    margin-bottom: 250px;
+    min-width: 400px; }
+  .dias {
+    padding: 15px 15px; }
+  .precios {
+    padding: 15px 15px; } }
 
 /*pagina 4*/
 .contenedor-campo {
