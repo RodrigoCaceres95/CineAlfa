@@ -30,14 +30,20 @@ function pregunta(respuesta) {
 let teGustaElCine = prompt("Te gusta el cine?");
 alert(pregunta(teGustaElCine));
 
-// function promptInteractivo(cine) {
-//     while (cine.toUpperCase() !="esc") {
-//         alert("Te gusta " + cine);
-//         cine = prompt ("Ingresa otra pelicula que te guste...");
-// }
-// }
-// let teGustanLosPrompts = prompt("Que pelicula es tu favorita?");
-// alert(promptInteractivo(teGustanLosPrompts));
+function peliculasFav() {
+    var peliculas = [];
+    var cont = "";
+    for (var i = 0; i <= 2; i++) {
+        var x = prompt("Ingresa una pelicula que te guste:");
+        peliculas[i] = x + ;
+    }
+    for (var i = 0; i <= 2; i++) {
+        cont += nombres[i] + " ";
+    }
+    alert("Las peliculas que te gustan son " + cont)
+}
+
+peliculasFav();
 
 let generos = ["terror", "comedia", "romantico", 
                 "accion", "superheroes", "thriller", 
