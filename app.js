@@ -35,7 +35,7 @@ function peliculasFav() {
     var cont = "";
     for (var i = 0; i <= 2; i++) {
         var x = prompt("Ingresa una pelicula que te guste:");
-        peliculas[i] = x + ;
+        peliculas[i] = x;
     }
     for (var i = 0; i <= 2; i++) {
         cont += nombres[i] + " ";
