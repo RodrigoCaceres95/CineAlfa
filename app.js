@@ -1,18 +1,3 @@
-//loop
-// let pregunta = prompt("Te gusta el cine?")
-// if (String (pregunta.toUpperCase()) == "SI"){
-//     alert("Entraste al lugar indicado")
-// } else {
-//     alert("Este sitio no es para ti")
-// }
-// let respuesta = prompt("Que pelicula es tu favorita?")
-// while (respuesta.toUpperCase() !="ESC") {
-//     alert("Te gusta " + respuesta)
-//     respuesta = prompt ("Ingresa otra pelicula que te guste...")
-// }
-
-//let respuesta = prompt("Que pelicula es tu favorita?")
-
 //funciones con loop interactivo
 function pregunta(respuesta) {
     switch (respuesta.toLowerCase()) {
@@ -31,6 +16,7 @@ let teGustaElCine = prompt("Te gusta el cine?");
 alert(pregunta(teGustaElCine));
 
 function peliculasFav() {
+    var textoCarteleras = document.getElementById("carteleraJavascript");
     var peliculas = [];
     var cont = "";
     for (var i = 0; i <= 2; i++) {
@@ -38,9 +24,11 @@ function peliculasFav() {
         peliculas[i] = x;
     }
     for (var i = 0; i <= 2; i++) {
-        cont += nombres[i] + " ";
+        cont += peliculas[i] + " ";
     }
     alert("Las peliculas que te gustan son " + cont)
+
+    textoCarteleras.innerHTML = `<h2>Porque te gustan: ${cont}... te podemos recomendar nuestra Cartelera</h2>` 
 }
 
 peliculasFav();
