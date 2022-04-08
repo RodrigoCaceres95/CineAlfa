@@ -62,7 +62,7 @@
         </header>
     </div>
     <h2 class="h1">Compra Online</h2>
-    <form class="contenedor-campo">
+    <form class="contenedor-campo" id="formulario">
         <legend>Por favor, seleccione su película</legend>
         <div class="contenedor-campo__flex">
             <div class="campo">
@@ -83,21 +83,21 @@
             </div>
             <div class="seleccion campo">
                 <label>Seleccione su pelicula:</label>
-                <select class="seleccion campo">
+                <select class="seleccion campo input">
                     <option disable selected>Seleccione su pelicula</option>
-                    <option value="">Spider-Man: No Way Home</option>
-                    <option value="">Matrix resurrections</option>
-                    <option value="">Clifford: El gran perro rojo</option>
-                    <option value="">House Of Gucci</option>
-                    <option value="">Encanto</option>
+                    <option value="Spider-Man">Spider-Man: No Way Home</option>
+                    <option value="Matrix">Matrix resurrections</option>
+                    <option value="Clifford">Clifford: El gran perro rojo</option>
+                    <option value="HouseOfGucci">House Of Gucci</option>
+                    <option value="Encanto">Encanto</option>
                 </select><br>
             </div>
             <div class="campo">
                 <label>Cantidad de entradas:</label>
-                <input class="Cantidad" type="number" placeholder="Cantidad de entradas" min="1"><br>
+                <input class="Cantidad input" type="number" placeholder="Cantidad de entradas" min="1"><br>
             </div>
             <div class="comprar">
-                <input class="boton" type="submit" value="Comprar"><br>
+                <button class="boton" type="submit" value="Comprar" id="btn" onclick="Capturar">Comprar</button><br>
             </div>
         </div>
     </form>
@@ -115,6 +115,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous">
     </script>
+    <script src="../app_pagina4.js"></script>
 </body>
 
 </html>
