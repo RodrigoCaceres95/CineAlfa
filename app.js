@@ -18,28 +18,19 @@ alert(pregunta(teGustaElCine));
 function peliculasFav() {
     var textoCarteleras = document.getElementById("carteleraJavascript");
     var peliculas = [];
-    var cont = "";
     for (var i = 0; i <= 2; i++) {
         var x = prompt("Ingresa una pelicula que te guste:");
         peliculas[i] = x;
+        if (x === "") {
+            alert("No pusiste ninguna película!")
+            break
+        }
+        alert("Las peliculas que te gustan son " + (peliculas[0] + ", " + peliculas[1] + " y " + peliculas[2]))
+        textoCarteleras.innerHTML = `<h2>Porque te gustan: ${peliculas[0]}, ${peliculas[1]} y ${peliculas[2]}... te podemos recomendar nuestra Cartelera</h2>`
     }
-    for (var i = 0; i <= 2; i++) {
-        cont += peliculas[i] + " ";
-    }
-    alert("Las peliculas que te gustan son " + cont)
-
-    textoCarteleras.innerHTML = `<h2>Porque te gustan: ${cont}... te podemos recomendar nuestra Cartelera</h2>` 
+    console.log(...peliculas)
 }
+
 
 peliculasFav();
 
-let generos = ["terror", "comedia", "romantico", 
-                "accion", "superheroes", "thriller", 
-                "suspenso", "drama", "tragico"]
-function generoDeCine(genero){
-    for (genero of generos) {
-    confirm("¿Te gusta " + genero + "?")
-    }
-}
-let genero = alert("Que genero te gusta?");
-generoDeCine(genero)
