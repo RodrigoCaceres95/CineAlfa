@@ -21,10 +21,7 @@ function peliculasFav() {
     for (var i = 0; i <= 2; i++) {
         var x = prompt("Ingresa una pelicula que te guste:");
         peliculas[i] = x;
-        if (x === "") {
-            alert("No pusiste ninguna película!")
-            break
-        }
+        x === "" && alert("No pusiste ninguna película!")
         alert("Las peliculas que te gustan son " + (peliculas[0] + ", " + peliculas[1] + " y " + peliculas[2]))
         textoCarteleras.innerHTML = `<h2>Porque te gustan: ${peliculas[0]}, ${peliculas[1]} y ${peliculas[2]}... te podemos recomendar nuestra Cartelera</h2>`
     }
