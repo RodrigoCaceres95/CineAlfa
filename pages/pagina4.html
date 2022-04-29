@@ -62,6 +62,7 @@
         </header>
     </div>
     <h2 class="h1">Compra Online</h2>
+    <div id="fecha"></div>
     <form class="contenedor-campo" id="formulario" name="miFormulario">
         <legend>Por favor, seleccione su película</legend>
         <div class="contenedor-campo__flex">
@@ -92,9 +93,17 @@
                     <option name="pelicula" value="Encanto">Encanto</option>
                 </select><br>
             </div>
+            <div class="seleccion campo">
+                <label>Seleccione su sala de Cine:</label>
+                <select class="seleccion campo input" name="sala" id="sala">
+                    <option name="sala" disabled selected value="No seleccionaste tu sala">Seleccione su sala</option>
+                    <option name="sala" value="2D">Sala 2D</option>
+                    <option name="sala" value="3D">Sala 3D</option>
+                </select><br>
+            </div>
             <div class="campo">
                 <label>Cantidad de entradas:</label>
-                <input id="Cantidad de entradas" class="Cantidad input" type="number" placeholder="Cantidad de entradas" min="1"><br>
+                <input id="Cantidad de entradas" name="cantEntradas" class="Cantidad input" type="number" placeholder="Cantidad de entradas" min="1"><br>
             </div>
             <div class="comprar">
                 <button class="boton" type="submit" value="Comprar" id="btn" onclick="Capturar">Comprar</button><br>
