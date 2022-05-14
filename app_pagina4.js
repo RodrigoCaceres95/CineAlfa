@@ -82,7 +82,6 @@ function validar(){
         return false
     }
     if (document.miFormulario.Apellidos.value === "") {
-        //alert("Te ha faltado rellenar tu/s Apellido/s!")
         Swal.fire({
             icon: "error",
             title: "Operación incompleta",
@@ -92,7 +91,6 @@ function validar(){
         return false
     }
     if (document.miFormulario.email.value === "") {
-        // alert("Te ha faltado rellenar tu email!")
         Swal.fire({
             icon: "error",
             title: "Operación incompleta",
@@ -102,7 +100,6 @@ function validar(){
         return false
     }
     if (document.miFormulario.telefono.value === "") {
-        // alert("Te ha faltado rellenar tu telefono!")
         Swal.fire({
             icon: "error",
             title: "Operación incompleta",
@@ -112,7 +109,6 @@ function validar(){
         return false
     }
     if (document.miFormulario.pelicula.value === "No seleccionaste tu película") {
-        // alert("Te ha faltado elegir tu película!")
         Swal.fire({
             icon: "error",
             title: "Operación incompleta",
@@ -122,7 +118,6 @@ function validar(){
         return false;
     }
     if (document.miFormulario.sala.value === "No seleccionaste tu sala") {
-        // alert("Te ha faltado elegir tu película!")
         Swal.fire({
             icon: "error",
             title: "Operación incompleta",
@@ -152,13 +147,11 @@ var Capturar = function(event){
         localStorage.setItem(datosCliente[i].id, JSON.stringify(datosCliente[i].value))
         datosCliente[i].value === "" ? console.log("Dato no ingresado") : console.log(datosCliente[i].value)
         event.preventDefault()
-        
     }
-    
 }
+
 let boton = document.getElementById("btn");
 boton.addEventListener("click", cobrarEntradas)
 boton.addEventListener("click", validar)
 boton.addEventListener("click", Capturar)
-
 fechaActual()
